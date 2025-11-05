@@ -37,7 +37,7 @@ jobs:
         path: app/build/outputs/apk/release/*.apk
 
     - name: Create Release
-      if: startsWith(github.ref, 'refs/heads/main') || startsWith(github.ref, 'refs/heads/master')
+      if: startsWith(github.ref, 'refs/heads/main') || startsWith(github.ref, 'refs/heads/master') || startsWith(github.ref, 'refs/heads/claude/')
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v1.0.${{ github.run_number }}
